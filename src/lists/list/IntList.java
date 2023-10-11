@@ -38,6 +38,18 @@ public class IntList {
         return totalSize;
     }
 
+    /**
+     * return the ith item of this IntList
+     * @param i
+     * @return
+     */
+    public int get(int i){
+        if (i == 0){
+            return first;
+        }
+        return rest.get(i - 1);
+    }
+
     public static void main(String[] args) {
         IntList L = new IntList(15, null);
         L = new IntList(10, L);
@@ -46,5 +58,6 @@ public class IntList {
 
         System.out.println("L.size() = " + L.size());
         System.out.println("L.iterativeSize() = " + L.iterativeSize());
+        System.out.println("L.get(1) = " + L.get(1));
     }
 }
